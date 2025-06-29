@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser')
 
 
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/blogify')
+     mongoose.connect(process.env.MONGO_URI)
+
     .then((e)=> console.log("MongoDB Connected"))
 
 const Blog = require('./models/blog')
