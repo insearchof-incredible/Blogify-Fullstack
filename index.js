@@ -5,9 +5,9 @@ const ejs = require('ejs')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 
-// mongoose.connect('mongodb://127.0.0.1:27017/blogify')
 
-mongoose.connect(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/blogify')
+
+mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/blogify')
     .then((e)=> console.log("MongoDB Connected"))
 
 const Blog = require('./models/blog')
